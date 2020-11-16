@@ -1,0 +1,44 @@
+.random-quote-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+#quote-box {
+  background: whitesmoke;
+  width: 30vw;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+    #quote-box {
+        width:100%;
+    }
+}
+
+#text {
+  padding: 1rem;
+}
+
+.fa-quote-left {
+  margin-right: 0.7rem;
+}
+
+#author {
+  margin: 0 1rem;
+  text-align: end;
+}
+
+.btns-container {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#new-quote {
+  border-radius: 20px;
+  color: aliceblue;
+  border: none;
+}

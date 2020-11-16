@@ -1,0 +1,39 @@
+.markdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    margin: 1rem;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+  }
+  
+  .markdown-input {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+  }
+  
+  @media only screen and (max-width: 768px){
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  .markdown {
+    height: 50vh;
+  }
+  }
+  
+  pre {
+    background: #edf5e1;
+    color: black;
+  }
+  
+  .markdown-textarea {
+    height: 100%;
+    border: 4px dotted;
+    padding: 1rem;
+  }
+
+  .preview-section {
+    color: var(--clr-secondary)
+  }
+  
