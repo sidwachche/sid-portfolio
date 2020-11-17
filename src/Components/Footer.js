@@ -11,6 +11,16 @@ function Footer() {
                 <li className="social-list__item">
                     <a
                         className="social-list__link"
+                        href="https://www.linkedin.com/in/siddhaling-wachche-a3764a75/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <i className="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li className="social-list__item">
+                    <a
+                        className="social-list__link"
                         href="https://codepen.io/sidwachche"
                         target="_blank"
                         rel="noreferrer"
