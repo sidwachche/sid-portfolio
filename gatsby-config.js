@@ -19,7 +19,7 @@ module.exports = {
     title: "Sid Wachche Portfolio",
     titleTemplate: "%s - by Sid Wachche",
     description:
-      "Siddhaling (Sid) Wachche Web developer Portfolio",
+      "Sid Wachche Portfolio. Siddhaling Wachche. Web Developer.",
     url: "https://sidwachche.netlify.app", // No trailing slash allowed!
     image: "/img/primary.webp", // Path to your image you placed in the 'static' folder
     twitterUsername: "@sidwachche",
