@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./markdown-preview.css";
 import Layout from "../Components/Layout";
 import marked from "marked";
+import SEO from "../Components/SEO";
+import GitLink from '../Components/GitLink';
 
 const iniText = `# Welcome to my React Markdown Previewer!
 
@@ -67,33 +69,39 @@ function MarkdownPreview() {
 	const [text, setText] = useState(iniText);
 
 	return (
-		<section className="markdown-grid">
-			<section className="markdown-input">
-				<h2>Markdown</h2>
-				<hr style={{width:"100%"}}></hr>
-				<textarea
-					name="write"
-					id="editor"
-					cols="30"
-					rows="10"
-					className="markdown-textarea"
-					onChange={(e) => setText(e.target.value)}
-					value={text}
-				></textarea>
+		<>
+			<SEO title="Markdown Preview App"
+				description="Freecodecamp Frontend library project. Markdown Preview App built with React.">
+			</SEO>
+			<GitLink link="https://codepen.io/sidwachche/pen/zYrPBag" />
+			<section className="markdown-grid">
+				<section className="markdown-input">
+					<h2>Markdown</h2>
+					<hr style={{ width: "100%" }}></hr>
+					<textarea
+						name="write"
+						id="editor"
+						cols="30"
+						rows="10"
+						className="markdown-textarea"
+						onChange={(e) => setText(e.target.value)}
+						value={text}
+					></textarea>
+				</section>
+				<section className="preview-section">
+					<h2>Preview</h2>
+					<hr></hr>
+					<Preview text={text} />
+				</section>
 			</section>
-			<section className="preview-section">
-				<h2>Preview</h2>
-				<hr></hr>
-				<Preview text={text} />
-			</section>
-		</section>
+		</>
 	);
 }
 function App() {
-  return (
-      <Layout>
-        <MarkdownPreview />
-      </Layout>
-  )
+	return (
+		<Layout>
+			<MarkdownPreview />
+		</Layout>
+	)
 }
 export default App;

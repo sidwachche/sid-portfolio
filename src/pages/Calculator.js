@@ -1,6 +1,7 @@
 import React from "react";
 import "./Calculator.css";
-
+import SEO from "../Components/SEO";
+import GitLink from '../Components/GitLink';
 import { useSelector, useDispatch } from "react-redux";
 import Layout from "../Components/Layout";
 
@@ -30,7 +31,12 @@ function Calculator() {
   const result = useSelector((state) => state.result);
 
   return (
-      <div className="calc-app">
+    <>
+      <SEO title="React-Redux Calculator App"
+        description="Freecodecamp Frontend library project. Calculator app built with React and redux.">
+      </SEO>
+      <GitLink link="https://github.com/sidwachche/calculator"/>
+      <section className="calc-app">
         <div className="calc-grid">
           <div className="calc-result">
             <div>{inputArr}</div>
@@ -51,14 +57,15 @@ function Calculator() {
             );
           })}
         </div>
-      </div>
+      </section>
+    </>
   );
 }
 function App() {
   return (
-      <Layout>
-        <Calculator/>
-      </Layout>
+    <Layout>
+      <Calculator />
+    </Layout>
   )
 }
 export default App;

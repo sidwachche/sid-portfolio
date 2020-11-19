@@ -63,6 +63,12 @@ img {
     max-width: 100%;
 }
 
+ul { 
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
 strong { font-weight: var(--fw-bold) }
 
 :focus {
@@ -107,6 +113,10 @@ h3 {
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
+
+a {
+    text-decoration: none;
+}
 
 
 .section__title {
@@ -176,12 +186,20 @@ h3 { font-size: var(--fs-h3) }
     color: var(--clr-light);
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 60vw;
+    
     right: 0;
     z-index: 100;
     
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+@media(max-width: 600px){
+    .nav {
+    bottom: 0;
+    left: 0;
+    }
 }
 
 .nav__list {
@@ -278,12 +296,26 @@ h3 { font-size: var(--fs-h3) }
 
 .intro__img {
     box-shadow: var(--bs);
+    background: url("img/primary.webp");
+    background-color: white;
+    background-size: cover;
 }
 
 .section__subtitle--intro {
     display: inline-block;
 }
-
+@media (max-width: 600px) {
+    .intro__img {
+        width:350px;
+        height: 350px;
+    }
+}
+@media (max-width: 380px) {
+    .intro__img {
+        width: 80vw;
+        height: 36vh;
+    }
+}
 @media (min-width: 600px) {
     .intro {
         display: grid;
@@ -299,6 +331,7 @@ h3 { font-size: var(--fs-h3) }
     .intro__img {
         grid-area: img;
         min-width: 250px;
+        height: 250px;
         position: relative;
         z-index: 2;
     }    
@@ -321,7 +354,6 @@ h3 { font-size: var(--fs-h3) }
 .my-services {
     background-color: var(--clr-dark);
     background-image: url("img/services-bg.webp");
-    background-image: url("img/services-bg.jpg");
     background-size: cover;
     background-blend-mode: overlay;
     color: var(--clr-light);
@@ -371,7 +403,7 @@ h3 { font-size: var(--fs-h3) }
 
 
 .about-me {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -380,29 +412,14 @@ h3 { font-size: var(--fs-h3) }
 }
 
 @media (min-width: 600px) {
-    .about-me {
-        display: grid;
-        grid-template-columns: 1fr 200px;
-        grid-template-areas: 
-            "title img"
-            "subtitle img"
-            "text img"
-            "skills skills";
-        grid-column-gap: 2em;
-    }
-    
+   
     .section__title--about {
         grid-area: title;
     }
     
     .section__subtitle--about {
-        grid-column: 1 / -1;
-        grid-row: 2;
         position: relative;
         left: -1em;
-        width: calc(100% + 2em);
-        padding-left: 1em;
-        padding-right: calc(200px + 4em);
     }
     
     .about-me__img {
@@ -431,7 +448,6 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .skills__title {
-    color: var(--clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     font-weight: 600;
@@ -443,16 +459,26 @@ h3 { font-size: var(--fs-h3) }
     margin: 18px 0 18px 18px;
 }
 
-.certificate {
+.about-me__certificate {
     text-decoration: none;
     color: var(--clr-secondary);
     display: inline-block;
     padding: 8px;
+    display: block;
+    transition: transform 250ms ease;
+}
+
+.about-me__certificate:hover {
+    transform: scaleX(1.05)
 }
 
 .fa-certificate,.fa-medal {
     margin-right: 8px;
     color: var(--clr-dark)
+}
+
+.about-me__award-description{
+    padding: 0 0.5rem;
 }
 /* My Work */
 
@@ -471,11 +497,12 @@ h3 { font-size: var(--fs-h3) }
 .portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
+    text-decoration: none;
 }
 
 .portfolio__img {
     transition: 
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        transform 750ms ease,
         opacity 250ms linear;
 }
 
@@ -489,7 +516,10 @@ h3 { font-size: var(--fs-h3) }
     transform: scale(1.2);
     opacity: .5;
 }
-
+/* .project__name{
+    background: var(--clr-light);
+    color: var(--clr-dark)
+} */
 
 /* footer */
 

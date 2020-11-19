@@ -13,7 +13,7 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
 .calc-grid {
     border-radius: 20px;
     display: grid;
-    grid-template: repeat(6, 60px) / repeat(4, 60px);
+    grid-template: 100px repeat(5, 60px) / repeat(4, 60px);
     grid-gap: 16px;
     background-color: black;
     padding: 30px;
@@ -33,10 +33,12 @@ background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, F
     border-radius: 50%;
     font-size: inherit;
     border: 2px solid white;
-    outline: none
+    outline: none;
+    transition: all .2s ease;
 }
 .calc-btn:hover {
     background-color: rgb(255, 193, 136);
+    transform: scale(1.1);
 }
 
 #clear {

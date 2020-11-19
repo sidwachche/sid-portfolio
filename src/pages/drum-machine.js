@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Layout from "../Components/Layout";
 import "./drum-machine.css";
+import SEO from "../Components/SEO";
+import GitLink from '../Components/GitLink';
 
 const config = [
 	{
@@ -87,29 +89,35 @@ function DrumMachine() {
 	}, [handleKeyDown]);
 
 	return (
-		<main className="drum-grid">
-			<section id="drum-machine">
-				<h1 className="drum-title">
-					DRUM <br></br> MACHINE
+		<>
+			<SEO title="Drum Machine App"
+				description="Freecodecamp Frontend library project. Drum machine app built with React.">
+			</SEO>
+			<GitLink link="https://github.com/sidwachche/drum-machine" />
+			<main className="drum-grid">
+				<section id="drum-machine">
+					<h1 className="drum-title">
+						DRUM <br></br> MACHINE
 				</h1>
-				<div id="drum-display">{display}</div>
-				<section className="drum-keys" onClick={handleClick}>
-					{config.map(({ id, src }) => (
-						<button key={id} className="drum-pad" id={`btn-${id}`}>
-							<audio id={id} src={src} className="clip"></audio>
-							{id}
-						</button>
-					))}
+					<div id="drum-display">{display}</div>
+					<section className="drum-keys" role="rowgroup" onClick={handleClick}>
+						{config.map(({ id, src }) => (
+							<button key={id} className="drum-pad" id={`btn-${id}`}>
+								<audio id={id} src={src} className="clip"></audio>
+								{id}
+							</button>
+						))}
+					</section>
 				</section>
-			</section>
-		</main>
+			</main>
+		</>
 	);
 }
 function App() {
-  return (
-      <Layout>
-        <DrumMachine />
-      </Layout>
-  )
+	return (
+		<Layout>
+			<DrumMachine />
+		</Layout>
+	)
 }
 export default App;

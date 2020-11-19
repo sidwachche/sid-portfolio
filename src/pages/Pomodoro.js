@@ -1,6 +1,8 @@
 import React, { useEffect, useReducer, useRef } from "react";
 import "./Pomodoro.css";
 import Layout from "../Components/Layout";
+import SEO from "../Components/SEO";
+import GitLink from '../Components/GitLink';
 
 const DEFAULT_BREAK_LENGTH = 5;
 const DEFAULT_SESSION_LENGTH = 25;
@@ -111,6 +113,11 @@ function Pomodoro() {
   }, [audioRef]);
 
   return (
+    <>
+      <SEO title="Pomodoro Clock App"
+        description="Freecodecamp Frontend library project. Pomodoro Clock App built with React hooks.">
+      </SEO>
+      <GitLink link="https://github.com/sidwachche/pomodoro-clock"/>
     <div className="pomo-parent">
       <section className="pomo">
         <h3 id="break-label">Break Length </h3>
@@ -190,6 +197,7 @@ function Pomodoro() {
         </section>
       </section>
     </div>
+    </>
   );
 }
 function App() {

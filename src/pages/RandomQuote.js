@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./RandomQuotes.css";
 import Layout from "../Components/Layout";
+import SEO from "../Components/SEO";
+import GitLink from '../Components/GitLink';
 
 const quotes = [
   {
@@ -242,48 +244,53 @@ function RandomQuotes() {
   const [color, setColor] = useState("#000");
   const [index, setIndex] = useState(0);
   return (
-    <div className="random-quote-container" style={{ backgroundColor: color }}>
-      <div id="quote-box">
-        <h3 id="text" style={{ color: color }}>
-          <i class="fa fa-quote-left" aria-hidden="true"></i>
-          {quotes[index].quoteText}
-        </h3>
-        <h5 id="author" style={{ color: color }}>
-          {quotes[index].quoteAuthor}
-        </h5>
-        <div className="btns-container">
-          <span className="social">
-            <a
-              href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="${quotes[index].quoteText}" ${quotes[index].quoteAuthor}`}
-              target="_blank"
-              style={{ color }}
-              id="tweet-quote"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
-          </span>
+    <>
+      <SEO title="Random Quote App"
+        description="Freecodecamp Frontend library project. Random Quote App built with React hooks.">
+      </SEO>
+      <GitLink link="https://github.com/sidwachche/Random_quotes"/>
+      <div className="random-quote-container" style={{ backgroundColor: color }}>
+        <div id="quote-box">
+          <h3 id="text" style={{ color: color }}>
+            <i class="fa fa-quote-left" aria-hidden="true"></i>
+            {quotes[index].quoteText}
+          </h3>
+          <h5 id="author" style={{ color: color }}>
+            {quotes[index].quoteAuthor}
+          </h5>
+          <div className="btns-container">
+            <span className="social">
+              <a
+                href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="${quotes[index].quoteText}" ${quotes[index].quoteAuthor}`}
+                target="_blank"
+                style={{ color }}
+                id="tweet-quote"
+              >
+                <i className="fab fa-twitter"></i>
+              </a>
+            </span>
 
-          <button
-            id="new-quote"
-            style={{ backgroundColor: color }}
-            className="btn"
-            onClick={() => {
-              setIndex(getRandomIndex());
-              setColor(getRandomColor());
-            }}
-          >
-            New Quote
+            <button
+              id="new-quote"
+              style={{ backgroundColor: color }}
+              onClick={() => {
+                setIndex(getRandomIndex());
+                setColor(getRandomColor());
+              }}
+            >
+              New Quote
           </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 function App() {
   return (
-      <Layout>
-        <RandomQuotes />
-      </Layout>
+    <Layout>
+      <RandomQuotes />
+    </Layout>
   )
 }
 export default App;
