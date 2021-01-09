@@ -29,7 +29,7 @@ module.exports = {
     "gatsby-plugin-advanced-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-preload-fonts",
-    "gatsby-plugin-webpack-bundle-analyzer",
+    // "gatsby-plugin-webpack-bundle-analyzer",
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
