@@ -12,11 +12,11 @@ function Home() {
                 {/* <!-- Introduction --> */}
                 <Intro></Intro>
 
-                {/* <!-- My services --> */}
-                <WorkExp/>
-
                 {/* <!-- About me --> */}
                 <About></About>
+
+                {/* <!-- My services --> */}
+                <WorkExp />
 
                 {/* <!-- My Work --> */}
                 <Projects></Projects>

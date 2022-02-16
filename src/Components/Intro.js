@@ -7,16 +7,16 @@ function Intro() {
                 Hi, I am <strong>Sid Wachche</strong>
             </h1>
             <p className="section__subtitle section__subtitle--intro">
-                front-end dev
-        </p>
+                Frontend Developer
+            </p>
             {/* <div style={{ width: "100%", height: "0", paddingTop: "100%", position: "relative" }}> */}
-                <div className="intro__img"></div>
-                {/* <img
+            <div className="intro__img"></div>
+            {/* <img
                     src="img/primary.webp"
                     alt="Sid Wachche smiling"
                     className="intro__img"
                 /> */}
-                {/* </div> */}
+            {/* </div> */}
         </section>
 
     )

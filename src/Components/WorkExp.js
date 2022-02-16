@@ -2,102 +2,84 @@ import React from 'react'
 
 function Work() {
   return (
-    <section className="home-section my-services" id="skills">
-      <div className="skill-set">
-        {/* <h2 className="section__title section__title--services">Skill Set</h2> */}
-        <h2 className="section__title section__title--skill">Skill Set</h2>
-        <div className="skills__body">
-          <ul>
-            <li className="skills__title">Frontend</li>
-            <li className="skills__item">
-              React, Redux, JavaScript, Gatsby
-              </li>
-            <li className="skills__item">ES6, Typescript, Redux-Saga</li>
-            <li className="skills__item">HTML, CSS, SCSS, Web Vitals, Angular</li>
-            <li className="skills__item">Jest, Enzyme, React Testing library</li>
-          </ul>
-
-          <ul>
-            <li className="skills__title">Backend</li>
-            <li className="skills__item">Node.JS, Express</li>
-            <li className="skills__item">Graphql, Apollo</li>
-            <li className="skills__item">Azure devops, search, serverless</li>
-            <li className="skills__item">Rest API, Load testing K6.io</li>
-          </ul>
-
-          <ul>
-            <li className="skills__title">Tools</li>
-            <li className="skills__item">Git, NPM, SEO, Jira</li>
-            <li className="skills__item">TDD, SQL, Linux</li>
-            <li className="skills__item">Webpack 4, ES Lint</li>
-            <li className="skills__item">Materiel UI, High Charts</li>
-          </ul>
-        </div>
-      </div>
-      <h2 className="section__title section__title--services">
+    <section className="home-section my-services text-center" id="skills">
+      <h2 className="section__title section__title--services text-primary">
         Work Experience
-            </h2>
+      </h2>
       <div className="services">
+        <h3 className="text-center dark-border">
+          Senior Frontend Engineer @ BuyerAssist
+        </h3>
+        <div className="text-left">
+          <p>
+            <i class="fas fa-bullseye"></i> Lead a team of 4 to build a Buyer engagement and customer collaboration platform for the sales team.
+          </p>
+          <p> <i class="fas fa-bullseye"></i>Took ownership of codebase and architected <strong>React SPA</strong> to make it scalable, maintainable, and extensible.</p>
+          <p> <i class="fas fa-bullseye"></i>Collaborated with UX designer to implement a design system and component library. Published a storybook for faster, consistent UI development, improved reusability.</p>
+          <p> <i class="fas fa-bullseye"></i><strong>Optimized the page load time </strong>by 50% with code splitting, preloading, image optimization, profiling.</p>
+          <p> <i class="fas fa-bullseye"></i>Built <strong>optimistic UI</strong>, updates the UI immediately on the action and syncs in the background. This resulted in a better user experience with quick response time.</p>
+          <p> <i class="fas fa-bullseye"></i>Implemented <strong>Redux-toolkit</strong> to scale for complex and large data by normalizing it into relational data. It helped develop state management efficiently, reduced code boilerplate by 40%.</p>
+          <p> <i class="fas fa-bullseye"></i>Saved 30% development time by implementing HMR [updates app without a browser reload] with Webpack 5, improving the developer experience.</p>
+        </div>
+
+      </div>
+      <div className="services services-grid">
         <div className="service">
           <h3>
-            Senior Web Developer
-              <br></br>@ JLL India
-            </h3>
+            Senior Frontend Developer
+            <br></br>@ JLL India
+          </h3>
           <p className="text-left">
-            Working as senior member of the front-end team for&nbsp;
-              <strong>Global Property Solution</strong>, which is designed for
-              real estate brokers across the world, as a research application.
-              Aims to make accurate, and complete commercial property and
-              interest data platform.
-              <br></br>
+            Working as senior UI developer for Global Property Solution, a research application, designed for real estate brokers across the world. Aims to make an accurate, complete commercial property data platform.
             <br></br>
-              Developed a single-page <strong>React</strong> application with
-              Apollo-graphql for large data set, involved in designing the
-              architecture for scalability and maintainability.
-            </p>
+            <br></br>
+            Developed a single-page React application with
+            Apollo-graphql for large data set, involved in designing the
+            architecture for scalability and maintainability.
+          </p>
         </div>
 
         <div className="service">
           <h3>
             Senior Software Engineer <br></br>@ Hashedin
-            </h3>
+          </h3>
           <p className="text-left">
-            Worked on <strong>Honeywell Building Management Solution</strong>
-              &nbsp; is portfolio of the connected devices to track real-time
-              performance, ensure buildings continue operate optimally and help
-              focus maintenance activities.
-              <br></br>
+            Worked on Honeywell Building Management Solution
+            &nbsp; is portfolio of the connected devices to track real-time
+            performance, ensure buildings continue operate optimally and help
+            focus maintenance activities.
             <br></br>
-              Architected and Developed a single-page <strong>
-              React
-              </strong>{" "}
-              application with <strong>Redux</strong> and integrated complex api
-              from GraphQL, elastic search, O-data, REST web-services.
-            </p>
+            <br></br>
+            Architected and Developed a single-page
+            React
+
+            application with Redux and integrated complex api
+            from GraphQL, elastic search, O-data, REST web-services.
+          </p>
         </div>
 
         <div className="service">
           <h3>
             Delivery Software Associate <br></br>@ Mphasis
-            </h3>
+          </h3>
           <p className="text-left">
-            Worked on Multiple <strong>FedEx</strong> projects. Visa
-              Management System for maintaining visa details of enterprise
-              employees in APAC, EMEA, and the US region and tracking the
-              preemptive expiry date.
-              <br></br>
-              <br></br>
-              Logistics Enhanced Operations for FedEx
-              operations related to pickup, delivery, and station
-              inbound/outbound.
-            </p>
+            Worked on Multiple FedEx projects. Visa
+            Management System for maintaining visa details of enterprise
+            employees in APAC, EMEA, and the US region and tracking the
+            preemptive expiry date.
+            <br></br>
+            <br></br>
+            Logistics Enhanced Operations for FedEx
+            operations related to pickup, delivery, and station
+            inbound/outbound.
+          </p>
         </div>
       </div>
 
       {/* <Link to="#work"></Link> */}
       <a href="#work" className="btn">
         My Work
-        </a>
+      </a>
     </section>
 
   )
