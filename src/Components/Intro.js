@@ -9,16 +9,11 @@ function Intro() {
             <p className="section__subtitle section__subtitle--intro">
                 Frontend Developer
             </p>
-            {/* <div style={{ width: "100%", height: "0", paddingTop: "100%", position: "relative" }}> */}
-            <div className="intro__img"></div>
-            {/* <img
-                    src="img/primary.webp"
-                    alt="Sid Wachche smiling"
-                    className="intro__img"
-                /> */}
-            {/* </div> */}
+            <picture className="intro__img">
+                <source srcset="img/siddha.webp" alt="Siddhaling Wachche" />
+                <img src="img/siddha.jpeg" alt="Siddhaling Wachche" />
+            </picture>
         </section>
-
     )
 }
 

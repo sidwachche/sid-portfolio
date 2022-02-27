@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description, image, article, enableTests }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -55,6 +55,7 @@ const SEO = ({ title, description, image, article }) => {
       )}
 
       {seo.image && <meta name="twitter:image" content={seo.image} />}
+      {enableTests && <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>}
     </Helmet>
   )
 }

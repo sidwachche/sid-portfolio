@@ -1,14 +1,13 @@
-
 .git-link {
-    padding: 1rem;
-    background: white;
-    transition: transform 250ms ease;
+  padding: 1rem 2rem;
+  background: white;
+  transition: transform 250ms ease;
 }
 
 .git-link:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
-.git-link a .fab{
-    padding: 0 1rem;
+.git-link a .fab {
+  padding: 0 1rem;
 }

@@ -76,10 +76,6 @@ function Work() {
         </div>
       </div>
 
-      {/* <Link to="#work"></Link> */}
-      <a href="#work" className="btn">
-        My Work
-      </a>
     </section>
 
   )

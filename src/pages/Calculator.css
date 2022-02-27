@@ -1,61 +1,68 @@
 .calc-app {
-    display: flex;
-    padding: 3rem;
-    justify-content: center;
-    align-items: center;
-    /* background-color: var(--clr-dark); */
-    background: #ff00cc;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: #ff00cc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #333399,
+    #ff00cc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #333399,
+    #ff00cc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .calc-grid {
-    border-radius: 20px;
-    display: grid;
-    grid-template: 100px repeat(5, 60px) / repeat(4, 60px);
-    grid-gap: 16px;
-    background-color: black;
-    padding: 30px;
-    border: 2px solid white;
+  border-radius: 20px;
+  display: grid;
+  grid-template: 100px repeat(5, 60px) / repeat(4, 60px);
+  grid-gap: 16px;
+  background-color: black;
+  padding: 30px;
+  border: 2px solid white;
 }
-@media(max-width:600px){
-    .calc-grid {
-        border: none;
-    }
+@media (max-width: 600px) {
+  .calc-grid {
+    border: none;
+  }
 }
 
 .calc-btn {
-    display: inline-block;
-    width: auto;
-    padding: 8px;
-    background-color: orange;
-    border-radius: 50%;
-    font-size: inherit;
-    border: 2px solid white;
-    outline: none;
-    transition: all .2s ease;
+  display: inline-block;
+  width: auto;
+  padding: 8px;
+  background-color: orange;
+  border-radius: 50%;
+  font-size: inherit;
+  border: 2px solid white;
+  outline: none;
+  transition: all 0.2s ease;
 }
 .calc-btn:hover {
-    background-color: rgb(255, 193, 136);
-    transform: scale(1.1);
+  background-color: rgb(255, 193, 136);
+  transform: scale(1.1);
 }
 
 #clear {
-    grid-column: span 3;
+  grid-column: span 3;
 }
 
 #zero {
-    grid-column: span 2;
+  grid-column: span 2;
 }
 
 .border-radius-20 {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 .calc-result {
-    grid-column: span 4;
-    color: white;
-    text-align: right;
-    font-size: 1.5em;
-    font-weight: 600;
+  grid-column: span 4;
+  color: white;
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: 600;
 }

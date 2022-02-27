@@ -243,12 +243,13 @@ export function getRandomColor() {
 function RandomQuotes() {
   const [color, setColor] = useState("#000");
   const [index, setIndex] = useState(0);
+
   return (
     <>
       <SEO title="Random Quote App"
         description="Freecodecamp Frontend library project. Random Quote App built with React hooks.">
       </SEO>
-      <GitLink link="https://github.com/sidwachche/Random_quotes"/>
+      <GitLink link="https://github.com/sidwachche/Random_quotes" />
       <div className="random-quote-container" style={{ backgroundColor: color }}>
         <div id="quote-box">
           <h3 id="text" style={{ color: color }}>
@@ -279,7 +280,7 @@ function RandomQuotes() {
               }}
             >
               New Quote
-          </button>
+            </button>
           </div>
         </div>
       </div>

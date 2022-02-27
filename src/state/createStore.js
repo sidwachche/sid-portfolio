@@ -71,6 +71,7 @@ const reducer = (state, action) => {
     case "equal": {
       if (inputArr.length < 3)
         return { result: inputArr[0], inputArr: [inputArr[0]], lastType: "" };
+
       const fullLength =
         inputArr.length % 2 === 0 ? inputArr.length - 1 : inputArr.length;
       const length = Math.floor(fullLength / 2);
@@ -82,22 +83,25 @@ const reducer = (state, action) => {
         const second = parseFloat(inputArr[mid + 1]);
 
         switch (operation) {
-          case "+":
+          case "+": {
             total = first + second;
             break;
+          }
 
-          case "-":
+          case "-": {
             total = first - second;
-
             break;
+          }
 
-          case "/":
+          case "/": {
             total = first / second;
             break;
+          }
 
-          case "*":
+          case "*": {
             total = first * second;
             break;
+          }
           default:
             break;
         }

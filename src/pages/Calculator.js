@@ -24,7 +24,6 @@ const config = [
   { type: "decimal", id: "decimal", text: "." },
   { type: "equal", id: "equals", text: "=" },
 ];
-
 function Calculator() {
   const dispatch = useDispatch();
   const inputArr = useSelector((state) => state.inputArr);
@@ -32,15 +31,18 @@ function Calculator() {
 
   return (
     <>
-      <SEO title="React-Redux Calculator App"
+      <SEO
+        title="React-Redux Calculator App"
+        enableTests
         description="Freecodecamp Frontend library project. Calculator app built with React and redux.">
       </SEO>
-      <GitLink link="https://github.com/sidwachche/calculator"/>
+      <GitLink link="https://github.com/sidwachche/calculator" />
       <section className="calc-app">
         <div className="calc-grid">
           <div className="calc-result">
             <div>{inputArr}</div>
-            <div id="calc-display">{result}</div>
+            <div id="display">{result}</div>
+            {/* <div id="display">{String(result).includes('.') ? Number(result).toFixed(4) : result}</div> */}
           </div>
           {config.map(({ text, id, customClass, type }) => {
             return (

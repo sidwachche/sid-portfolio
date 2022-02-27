@@ -175,13 +175,18 @@ a {
 .home-header {
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  padding: 1em 3em;
   position: fixed;
   display: block;
   width: 100%;
   background: white;
   z-index: 20;
   box-shadow: var(--bs);
+}
+@media (max-width: 768px) {
+  .home-header {
+    padding: 1em;
+  }
 }
 
 .header-ht-fix {
@@ -312,7 +317,6 @@ a {
 
 .intro__img {
   box-shadow: var(--bs);
-  background: url("img/primary.webp");
   background-color: white;
   background-size: cover;
 }
@@ -320,18 +324,7 @@ a {
 .section__subtitle--intro {
   display: inline-block;
 }
-@media (max-width: 600px) {
-  .intro__img {
-    width: 350px;
-    height: 350px;
-  }
-}
-@media (max-width: 380px) {
-  .intro__img {
-    width: 80vw;
-    height: 36vh;
-  }
-}
+
 @media (min-width: 600px) {
   .intro {
     display: grid;
